@@ -1,3 +1,4 @@
+/* Definindo algumas "variáveis" para facilitar a troca de cores depois */
 :root {
     --primary-color: #2563eb;
     --primary-hover: #1d4ed8;
@@ -8,6 +9,7 @@
     --border-color: #e5e7eb;
 }
 
+/* Resetando margens e paddings padrão do navegador para não atrapalhar */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +17,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+/* Efeito de rolagem suave quando clica nos links do menu */
 html {
     scroll-behavior: smooth;
 }
@@ -25,6 +28,7 @@ body {
     line-height: 1.6;
 }
 
+/* Container centralizado para manter o conteúdo organizado no meio da tela */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -32,17 +36,17 @@ body {
     padding: 0 20px;
 }
 
-/* Header & Nav */
+/* Estilizando o Cabeçalho e o Menu */
 header {
     background-color: var(--bg-main);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
+    position: sticky; /* Deixa o menu preso no topo quando a gente rola a página */
     top: 0;
     z-index: 100;
 }
 
 nav {
-    display: flex;
+    display: flex; /* Uso Flexbox para alinhar a logo de um lado e o menu do outro */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -73,7 +77,7 @@ nav {
     color: var(--primary-color);
 }
 
-/* Sections */
+/* Configurações gerais das seções */
 .section {
     padding: 80px 0;
 }
@@ -89,7 +93,7 @@ h2 {
     color: var(--text-main);
 }
 
-/* Sobre Mim */
+/* Estilos da Seção Sobre Mim */
 .sobre-content {
     max-width: 800px;
     margin: 0 auto;
@@ -102,10 +106,11 @@ h2 {
     gap: 20px;
 }
 
+/* Estilizando a foto de perfil para ficar redonda */
 .perfil-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* Faz o círculo perfeito */
     object-fit: cover;
     border: 4px solid var(--primary-color);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -115,13 +120,14 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Projetos */
+/* Grid de Projetos */
 .projetos-grid {
-    display: grid;
+    display: grid; /* Uso Grid para organizar os cards em colunas automáticas */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
+/* Estilizando o Card do Projeto */
 .projeto-card {
     background-color: var(--bg-main);
     border-radius: 8px;
@@ -134,7 +140,7 @@ h2 {
 }
 
 .projeto-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de subir quando passa o mouse */
     box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
 
@@ -142,7 +148,7 @@ h2 {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    background-color: #ddd; /* Fallback color */
+    background-color: #ddd;
 }
 
 .projeto-info {
@@ -181,7 +187,7 @@ h2 {
     background-color: var(--primary-hover);
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     background-color: var(--text-main);
     color: white;
@@ -189,10 +195,10 @@ footer {
     padding: 30px 0;
 }
 
-/* Responsividade */
+/* Ajustes para telas menores (celulares) */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Muda o menu para ficar um embaixo do outro no celular */
         gap: 20px;
     }
     
